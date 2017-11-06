@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PanelAddChord from './components/Panel'
 
 class App extends Component {
   render() {
@@ -9,6 +10,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Random Chord Progression Generator</h1>
         </header>
+        <div className="container">
+          <PanelAddChord />
+        </div>
       </div>
     );
   }
