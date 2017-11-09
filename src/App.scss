@@ -15,3 +15,35 @@
 
 .App-title {
 }
+
+input, select, textarea, button {
+  font-size: inherit !important;
+}
+
+/* xs */
+@media only screen and (min-width : 480px) {
+  .App {
+    font-size: 100%;
+  }
+}
+
+/* sm */
+@media only screen and (min-width : 768px) {
+  .App {
+    font-size: 125%;
+  }
+}
+
+/* md */
+@media only screen and (min-width : 992px) {
+  .App {
+    font-size: 125%;
+  }
+}
+
+/* lg */
+@media only screen and (min-width : 1200px) {
+  .App {
+    font-size: 150%;
+  }
+}
