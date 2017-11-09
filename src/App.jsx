@@ -10,7 +10,11 @@ class App extends Component {
           <h1 className="App-title">Random Chord Progression Generator</h1>
         </header>
         <div className="container">
-          <PanelAddChord />
+          <div className="row">
+            <div className="col-xs-12">
+              <PanelAddChord />
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -46,29 +46,24 @@ class PitchSelector extends Component {
   render() {
     var {selectedPitches} = this.state
     return (
-      <div className="row">
-        <div className="col-xs-12">
-          <FilteredMultiSelect
-            classNames={BOOTSTRAP_CLASSES}
-            onChange={this.handleSelectionChange}
-            options={this.pitchOptions}
-            selectedOptions={selectedPitches}
-            textProp="name"
-            valueProp="id"
-          />
-        </div>
-
-        <div className="col-xs-12">
-          {selectedPitches.length === 0 && <p>(nothing selected yet)</p>}
-          {selectedPitches.length > 0 && <ul className="list-group">
-            {selectedPitches.map((pitch, i) => <li key={pitch.id} className="list-group-item">
-              {`${pitch.name} `}
-              <span className="close" style={{cursor: 'pointer'}} onClick={() => this.handleDeselect(i)}>
-                &times;
-              </span>
-            </li>)}
-          </ul>}
-        </div>
+      <div>
+        <FilteredMultiSelect
+          classNames={BOOTSTRAP_CLASSES}
+          onChange={this.handleSelectionChange}
+          options={this.pitchOptions}
+          selectedOptions={selectedPitches}
+          textProp="name"
+          valueProp="id"
+        />
+        {selectedPitches.length === 0 && <p>(nothing selected yet)</p>}
+        {selectedPitches.length > 0 && <ul className="list-group">
+          {selectedPitches.map((pitch, i) => <li key={pitch.id} className="list-group-item">
+            {`${pitch.name} `}
+            <span className="close" style={{cursor: 'pointer'}} onClick={() => this.handleDeselect(i)}>
+              &times;
+            </span>
+          </li>)}
+        </ul>}
       </div>
     );
   }
