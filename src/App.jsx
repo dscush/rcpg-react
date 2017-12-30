@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PanelAddChord from './components/Panel'
+import PanelAddChord from './components/PanelAddChord'
 
 class App extends Component {
   render() {

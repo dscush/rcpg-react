@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PitchSelector from './PitchSelector'
+import React from 'react';
 
 function Panel(props) {
   return (
@@ -18,13 +17,4 @@ function Panel(props) {
   );
 }
 
-class PanelAddChord extends Component {
-  render() {
-    return (
-    <Panel title="Add a Chord">
-      <PitchSelector />
-    </Panel>
-  )}
-}
-
-export default PanelAddChord;
+export default Panel;
