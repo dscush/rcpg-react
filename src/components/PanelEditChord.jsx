@@ -7,7 +7,7 @@ class PanelEditChord extends Component {
     return (
     <Panel title="Edit a Chord">
       <form>
-        <label for="chord-name">Name</label>
+        <label htmlFor="chord-name">Name</label>
         <input type="text" id="chord-name" name="chord-name" />
         <PitchSelector />
       </form>
