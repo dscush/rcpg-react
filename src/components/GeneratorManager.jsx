@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Panel from './Panel'
 import GeneratorSelector from './GeneratorSelector'
 
-class PanelManageGenerators extends Component {
+class GeneratorManager extends Component {
   render() {
     return (
     <Panel title="Select or Create a Generator">
@@ -15,4 +15,4 @@ class PanelManageGenerators extends Component {
   )}
 }
 
-export default PanelManageGenerators;
+export default GeneratorManager;
