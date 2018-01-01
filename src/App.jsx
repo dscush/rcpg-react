@@ -1,8 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
 import PanelEditChord from './components/PanelEditChord'
+import PanelManageGenerators from './components/PanelManageGenerators'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {generators: []}; // TODO: ajax to server. also, create server
+
+    this.createGenerator = this.createGenerator.bind(this);
+    this.selectGenerator = this.selectGenerator.bind(this);
+  }
+
+  createGenerator(name) {
+    this.setState(function(state) {
+      state.generators.push({name: name, chords: []});
+      return {generators: state.generators};
+    });
+  }
+
+  selectGenerator(name) {
+    // TODO: create PanelEditGenerator and load it with the selected generator
+    console.log(name);
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,6 +34,11 @@ class App extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
               <PanelEditChord />
+              <PanelManageGenerators
+                createGenerator={this.createGenerator}
+                selectGenerator={this.selectGenerator}
+                generators={this.state.generators.map((generator) => generator.name)}
+              />
             </div>
           </div>
         </div>
