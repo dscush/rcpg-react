@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Panel from './Panel'
 import PitchSelector from './PitchSelector'
 
-class PanelEditChord extends Component {
+class ChordEditor extends Component {
   render() {
     return (
     <Panel title="Edit a Chord">
@@ -15,4 +15,4 @@ class PanelEditChord extends Component {
   )}
 }
 
-export default PanelEditChord;
+export default ChordEditor;
