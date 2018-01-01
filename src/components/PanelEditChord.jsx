@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Panel from './Panel'
 import PitchSelector from './PitchSelector'
 
-class PanelAddChord extends Component {
+class PanelEditChord extends Component {
   render() {
     return (
-    <Panel title="Add a Chord">
+    <Panel title="Edit a Chord">
       <form>
         <label for="chord-name">Name</label>
         <input type="text" id="chord-name" name="chord-name" />
@@ -15,4 +15,4 @@ class PanelAddChord extends Component {
   )}
 }
 
-export default PanelAddChord;
+export default PanelEditChord;
