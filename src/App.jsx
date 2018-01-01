@@ -6,7 +6,15 @@ import GeneratorManager from './components/GeneratorManager';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {generators: []}; // TODO: ajax to server. also, create server
+    let generators = [];
+    this.state = {
+      generators: generators,
+      currentPanel: <GeneratorManager
+        createGenerator={this.createGenerator}
+        selectGenerator={this.selectGenerator}
+        generators={generators.map((generator) => generator.name)}
+      />
+    };
 
     this.createGenerator = this.createGenerator.bind(this);
     this.selectGenerator = this.selectGenerator.bind(this);
@@ -33,12 +41,7 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-              <ChordEditor />
-              <GeneratorManager
-                createGenerator={this.createGenerator}
-                selectGenerator={this.selectGenerator}
-                generators={this.state.generators.map((generator) => generator.name)}
-              />
+              {this.state.currentPanel}
             </div>
           </div>
         </div>
