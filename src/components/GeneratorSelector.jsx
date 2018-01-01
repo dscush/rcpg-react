@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CreateGeneratorForm from './CreateGeneratorForm'
-import SelectGeneratorForm from './SelectGeneratorForm'
+import CreateGeneratorForm from './CreateGeneratorForm';
+import SelectGeneratorForm from './SelectGeneratorForm';
 
 class GeneratorSelector extends Component {
   constructor(props) {

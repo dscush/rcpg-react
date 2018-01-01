@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Panel from './Panel'
-import GeneratorSelector from './GeneratorSelector'
+import Panel from './Panel';
+import GeneratorSelector from './GeneratorSelector';
 
 class GeneratorManager extends Component {
   render() {

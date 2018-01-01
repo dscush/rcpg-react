@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import FilteredMultiSelect from 'react-filtered-multiselect'
+import FilteredMultiSelect from 'react-filtered-multiselect';
 
 const BOOTSTRAP_CLASSES = {
   filter: 'form-control',
   select: 'form-control',
   button: 'btn btn btn-block btn-default',
   buttonActive: 'btn btn btn-block btn-primary',
-}
+};
 
 class Pitch {
   pitchClasses = ['C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B'];
@@ -33,18 +33,18 @@ class PitchSelector extends Component {
   }
 
   handleDeselect(index) {
-    var selectedPitches = this.state.selectedPitches.slice()
-    selectedPitches.splice(index, 1)
-    this.setState({selectedPitches})
+    var selectedPitches = this.state.selectedPitches.slice();
+    selectedPitches.splice(index, 1);
+    this.setState({selectedPitches});
   }
 
   handleSelectionChange = (selectedPitches) => {
-    selectedPitches.sort((a, b) => a.id - b.id)
-    this.setState({selectedPitches})
+    selectedPitches.sort((a, b) => a.id - b.id);
+    this.setState({selectedPitches});
   }
 
   render() {
-    var {selectedPitches} = this.state
+    var {selectedPitches} = this.state;
     return (
       <div>
         <FilteredMultiSelect

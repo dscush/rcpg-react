@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ChordEditor from './components/ChordEditor'
-import GeneratorManager from './components/GeneratorManager'
+import ChordEditor from './components/ChordEditor';
+import GeneratorManager from './components/GeneratorManager';
 
 class App extends Component {
   constructor(props) {
