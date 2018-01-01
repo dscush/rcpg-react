@@ -5,7 +5,7 @@ function Panel(props) {
     <div className="panel panel-default">
       {props.title ? (
         <div className="panel-heading">
-          {props.title}
+          <h2>{props.title}</h2>
         </div>
       ) : (
         ''
