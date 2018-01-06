@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CreateGeneratorForm extends Component {
+class CreationForm extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -15,7 +15,7 @@ class CreateGeneratorForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.createGenerator(this.state.value)
+    this.props.create(this.state.value)
   }
 
   render() {
@@ -31,4 +31,4 @@ class CreateGeneratorForm extends Component {
   }
 }
 
-export default CreateGeneratorForm;
+export default CreationForm;

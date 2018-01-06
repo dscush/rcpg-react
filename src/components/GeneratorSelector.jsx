@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CreateGeneratorForm from './CreateGeneratorForm';
+import CreationForm from './CreationForm';
 import SelectGeneratorForm from './SelectGeneratorForm';
 
 class GeneratorSelector extends Component {
@@ -13,7 +13,7 @@ class GeneratorSelector extends Component {
       <div>
         <div>
           <h3>Create a Generator</h3>
-          <CreateGeneratorForm createGenerator={this.props.createGenerator}/>
+          <CreationForm create={this.props.createGenerator}/>
         </div>
         {this.props.generators.length !== 0 &&
           <div>
