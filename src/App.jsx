@@ -8,6 +8,7 @@ class App extends Component {
     super();
     this.state = {
       generators: [],
+      currentGenerator: null,
     };
   }
 
@@ -18,17 +19,31 @@ class App extends Component {
   }
 
   selectGenerator(name) {
-    // TODO: create PanelEditGenerator and load it with the selected generator
-    console.log(name);
+    this.setState({currentGenerator: name});
   }
   
   renderCurrentPanel = () => {
+    if (this.state.currentGenerator) {
+      return this.renderGeneratorEditor();
+    } else {
+      return this.renderGeneratorManager();
+    }
+  }
+
+  renderGeneratorManager = () => {
     return (
       <GeneratorManager
         createGenerator={this.createGenerator.bind(this)}
         selectGenerator={this.selectGenerator.bind(this)}
         generators={this.state.generators.map((generator) => generator.name)}
       />
+    );
+  }
+
+  renderGeneratorEditor = () => {
+    return (
+      // TODO: create PanelEditGenerator and load it with the selected generator
+      null
     );
   }
 
