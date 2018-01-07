@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class CreateGeneratorForm extends Component {
+class SelectionForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: this.props.generators.length === 0 ? '' : this.props.generators[0]};
+    this.state = {value: this.props.options.length === 0 ? '' : this.props.options[0]};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,18 +15,16 @@ class CreateGeneratorForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.selectGenerator(this.state.value);
+    this.props.select(this.state.value);
   }
 
   render() {
-    const options = this.props.generators.map((generator) => <option key={generator} value={generator}>{generator}</option>);
-
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Generators:
+          {this.props.label}:
           <select value={this.state.value} onChange={this.handleChange}>
-            {options}
+            {this.props.options.map((option) => <option key={option.key} value={option.value}>{option.label}</option>)}
           </select>
         </label>
         <input type="submit" value="Submit" />
@@ -35,4 +33,4 @@ class CreateGeneratorForm extends Component {
   }
 }
 
-export default CreateGeneratorForm;
+export default SelectionForm;

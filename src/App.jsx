@@ -35,7 +35,7 @@ class App extends Component {
       <GeneratorManager
         createGenerator={this.createGenerator.bind(this)}
         selectGenerator={this.selectGenerator.bind(this)}
-        generators={this.state.generators.map((generator) => generator.name)}
+        generators={this.state.generators}
       />
     );
   }

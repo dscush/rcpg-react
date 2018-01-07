@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreationForm from './CreationForm';
-import SelectGeneratorForm from './SelectGeneratorForm';
+import SelectionForm from './SelectionForm';
 
 class GeneratorSelector extends Component {
   constructor(props) {
@@ -18,9 +18,14 @@ class GeneratorSelector extends Component {
         {this.props.generators.length !== 0 &&
           <div>
             <h3>Select a Generator</h3>
-            <SelectGeneratorForm
-              generators={this.props.generators}
-              selectGenerator={this.props.selectGenerator}
+            <SelectionForm
+              options={this.props.generators.map((generator) => ({
+                key: generator.name,
+                value: generator.name,
+                label: generator.name
+              }))}
+              select={this.props.selectGenerator}
+              label='Generators'
             />
           </div>
         }
