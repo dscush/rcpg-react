@@ -13,7 +13,10 @@ class GeneratorSelector extends Component {
       <div>
         <div>
           <h3>Create a Generator</h3>
-          <CreationForm create={this.props.createGenerator}/>
+          <CreationForm
+            create={this.props.createGenerator}
+            id='generator-create'
+          />
         </div>
         {this.props.generators.length !== 0 &&
           <div>
@@ -26,6 +29,7 @@ class GeneratorSelector extends Component {
               }))}
               select={this.props.selectGenerator}
               label='Generators'
+              id='generator-select'
             />
           </div>
         }

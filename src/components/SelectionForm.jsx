@@ -21,13 +21,13 @@ class SelectionForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          {this.props.label}:
-          <select value={this.state.value} onChange={this.handleChange}>
+        <div className="form-group">
+          <label className="sr-only" htmlFor={this.props.id}>{this.props.label}:</label>
+          <select className="form-control" id={this.props.id} value={this.state.value} onChange={this.handleChange}>
             {this.props.options.map((option) => <option key={option.key} value={option.value}>{option.label}</option>)}
           </select>
-        </label>
-        <input type="submit" value="Submit" />
+        </div>
+        <button type="submit" className="btn btn-primary">Select</button>
       </form>
     );
   }

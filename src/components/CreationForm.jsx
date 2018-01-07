@@ -21,11 +21,11 @@ class CreationForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+        <div className="form-group">
+          <label className="sr-only" htmlFor={this.props.id}>Name:</label>
+          <input type="text" className="form-control" id={this.props.id} placeholder="Name" value={this.state.value} onChange={this.handleChange} />
+        </div>
+        <button type="submit" className="btn btn-primary">Create</button>
       </form>
     );
   }
