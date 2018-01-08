@@ -16,6 +16,7 @@ class GeneratorSelector extends Component {
           <CreationForm
             create={this.props.createGenerator}
             id='generator-create'
+            existingNames={this.props.generators.map((generator) => generator.name)}
           />
         </div>
         {this.props.generators.length !== 0 &&
