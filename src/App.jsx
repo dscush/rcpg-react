@@ -14,7 +14,7 @@ class App extends Component {
 
   createGenerator(name) {
     this.setState(prevState => ({
-        generators: [...prevState.generators, {name: name, chord: []}]
+        generators: [...prevState.generators, {name: name, chords: []}]
     }));
   }
 
